@@ -6,5 +6,120 @@
     <link rel="stylesheet" href="css/style.css" />
     <title>Domaci</title>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <nav>
+        <div class="newyork">
+          <img src="slike/location.png" alt="location" />
+          <p>New York</p>
+        </div>
+        <ul>
+          <li>Rent</li>
+          <li>Buy</li>
+          <li>Sell</li>
+          <li>Messages</li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="hOneWrapper">
+          <h1>Welcome to HomeExchange</h1>
+          <p>Your fastest way fo find or sell home online.</p>
+        </div>
+      </section>
+      <section class="filter">
+        <div><p>$1.200-$4.000</p></div>
+        <div><p>1+ Bedroom</p></div>
+        <div><p>Garage</p></div>
+      </section>
+      <section class="gallery">
+        <div>
+          <img src="slike/1.jpg" alt="1" />
+          <img src="slike/2.jpg" alt="2" />
+          <img src="slike/3.jpg" alt="3" />
+          <img src="slike/4.jpg" alt="4" />
+          <img src="slike/5.jpg" alt="5" />
+          <img src="slike/6.jpg" alt="6" />
+        </div>
+      </section>
+      <section class="pricing">
+        <div class="price">
+          <div class="pricingWrapper">
+            <h2>PRICING</h2>
+            <p>Our services prices in New York</p>
+          </div>
+          <div class="tabela">
+            <table>
+              <tr>
+                <td rowspan="2"></td>
+                <td rowspan="2"></td>
+                <td colspan="2" class="orangeBg">Price</td>
+              </tr>
+              <tr>
+                <td class="grayBg">Rent/Buy</td>
+                <td class="grayBg">Sell</td>
+              </tr>
+              <tr>
+                <td rowspan="3" class="orangeBg">Location</td>
+                <td class="grayBg">Downtown</td>
+                <td>3$</td>
+                <td>3$</td>
+              </tr>
+              <tr>
+                <td class="grayBg">Center</td>
+                <td>3$</td>
+                <td>3$</td>
+              </tr>
+              <tr>
+                <td class="grayBg">Manhattan</td>
+                <td>3$</td>
+                <td>3$</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <section class="contact">
+        <h2>CONTACT US</h2>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12088.736529799064!2d-73.9855426!3d40.7579747!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6480299%3A0x55194ec5a1ae072e!2sTimes%20Square!5e0!3m2!1sen!2srs!4v1695415746189!5m2!1sen!2srs"
+          width="400"
+          height="300"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+        <div class="forma">
+          <form action="/" method="post">
+            <select name="gender" id="gender">
+              <option value="Mr">Mr</option>
+              <option value="Mrs" selected>Mrs</option>
+              <option value="Miss">Miss</option>
+            </select>
+            <input type="text" name="name" id="name" placeholder="Your name" />
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Your email"
+            />
+            <textarea
+              name="Message"
+              id="message"
+              cols="30"
+              rows="10"
+              placeholder="Your message"
+            ></textarea>
+          </form>
+        </div>
+        <div class="copyright">
+          <p>Copyright &copy 2016 <span>HomeExchange</span></p>
+        </div>
+      </section>
+    </footer>
+  </body>
 </html>

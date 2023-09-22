@@ -1,0 +1,234 @@
+@import "vars.scss";
+@import "mixin.scss";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+
+* {
+  @include defaulSettings;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+}
+header {
+  background-color: $darkBlue;
+  height: 5%;
+  width: 100%;
+  nav {
+    height: 100%;
+    display: flex;
+    .newyork {
+      height: 100%;
+      width: 20%;
+      background-color: $orange;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      img {
+        height: 60%;
+        margin: 1.5em 0 1.5em 1em;
+      }
+      p {
+        display: inline-block;
+        font-size: $fontSize;
+        color: $sectionBg;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+nav {
+  ul {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    li {
+      display: inline-block;
+      margin: 1em 3em 1em 1em;
+      color: $sectionBg;
+    }
+  }
+}
+main {
+  width: 100%;
+  height: 128em;
+  .hero {
+    background-image: url(../slike/intro.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    .hOneWrapper {
+      width: 70%;
+      height: 15%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background-color: rgba(55, 66, 73, 0.5);
+      margin-bottom: 10em;
+      h1 {
+        color: $sectionBg;
+        font-size: calc($fontSize * 3);
+        font-weight: 400;
+      }
+      p {
+        color: $sectionBg;
+        font-size: calc($fontSize * 1.1);
+      }
+    }
+  }
+  .filter {
+    width: 90%;
+    height: 5%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    div {
+      height: 1em;
+      display: inline-block;
+      padding: 1em 2.5em;
+      border: 1px solid $fontColor;
+      border-radius: 2em;
+      margin: 1em;
+    }
+  }
+  .gallery {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    background-color: $sectionBg;
+    div {
+      width: 80%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      align-content: center;
+      flex-wrap: wrap;
+
+      img {
+        height: 40%;
+        width: 22%;
+        margin: 1em;
+      }
+    }
+  }
+  .pricing {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    .price {
+      width: 50%;
+    }
+  }
+}
+
+table {
+  border-spacing: 0;
+  width: 100%;
+
+  tr {
+    td {
+      padding: 0.6em;
+      border: 1px solid rgba($darkBlueBorder, 0.3);
+
+      &:first-of-type {
+        border: none;
+      }
+
+      &:nth-of-type(2) {
+        border: none;
+      }
+    }
+  }
+}
+
+.pricingWrapper {
+  text-align: center;
+  h2 {
+    margin: 2em;
+  }
+  p {
+    margin-bottom: 2em;
+  }
+}
+
+.orangeBg {
+  background-color: $orange;
+  color: $sectionBg;
+  text-align: center;
+}
+.grayBg {
+  background-color: $darkBlue;
+  color: $sectionBg;
+  text-align: center;
+}
+
+footer {
+  background-color: $sectionBg;
+
+  .contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    h2 {
+      width: 100%;
+      margin: 2em;
+      text-align: center;
+    }
+    iframe {
+      margin: 2em;
+    }
+    .copyright {
+      width: 100%;
+      height: 3em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $darkBlue;
+      color: $sectionBg;
+      span {
+        color: $orange;
+      }
+    }
+  }
+}
+
+.forma {
+  width: 40%;
+  height: 10.7em;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: $orange;
+  form {
+    width: 100%;
+    select {
+      width: 10em;
+      margin: 1em;
+      border: none;
+    }
+    #name {
+      width: 28em;
+      margin: 1em;
+      border: none;
+    }
+    #email {
+      width: 40.3em;
+      margin: 1em;
+      border: none;
+    }
+    textarea {
+      width: 40.3em;
+      height: 20%;
+      margin: 1em;
+      border: none;
+    }
+  }
+}

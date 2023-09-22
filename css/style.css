@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+header {
+  background-color: #374249;
+  height: 5%;
+  width: 100%;
+}
+header nav {
+  height: 100%;
+  display: flex;
+}
+header nav .newyork {
+  height: 100%;
+  width: 20%;
+  background-color: #f75311;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+header nav .newyork img {
+  height: 60%;
+  margin: 1.5em 0 1.5em 1em;
+}
+header nav .newyork p {
+  display: inline-block;
+  font-size: 20px;
+  color: #f3f7f9;
+  text-decoration: underline;
+}
+
+nav ul {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+nav ul li {
+  display: inline-block;
+  margin: 1em 3em 1em 1em;
+  color: #f3f7f9;
+}
+
+main {
+  width: 100%;
+  height: 128em;
+}
+main .hero {
+  background-image: url(../slike/intro.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 35%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+main .hero .hOneWrapper {
+  width: 70%;
+  height: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(55, 66, 73, 0.5);
+  margin-bottom: 10em;
+}
+main .hero .hOneWrapper h1 {
+  color: #f3f7f9;
+  font-size: 60px;
+  font-weight: 400;
+}
+main .hero .hOneWrapper p {
+  color: #f3f7f9;
+  font-size: 22px;
+}
+main .filter {
+  width: 90%;
+  height: 5%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+main .filter div {
+  height: 1em;
+  display: inline-block;
+  padding: 1em 2.5em;
+  border: 1px solid #797979;
+  border-radius: 2em;
+  margin: 1em;
+}
+main .gallery {
+  width: 100%;
+  height: 40%;
+  display: flex;
+  justify-content: center;
+  background-color: #f3f7f9;
+}
+main .gallery div {
+  width: 80%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
+main .gallery div img {
+  height: 40%;
+  width: 22%;
+  margin: 1em;
+}
+main .pricing {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+main .pricing .price {
+  width: 50%;
+}
+
+table {
+  border-spacing: 0;
+  width: 100%;
+}
+table tr td {
+  padding: 0.6em;
+  border: 1px solid rgba(73, 87, 96, 0.3);
+}
+table tr td:first-of-type {
+  border: none;
+}
+table tr td:nth-of-type(2) {
+  border: none;
+}
+
+.pricingWrapper {
+  text-align: center;
+}
+.pricingWrapper h2 {
+  margin: 2em;
+}
+.pricingWrapper p {
+  margin-bottom: 2em;
+}
+
+.orangeBg {
+  background-color: #f75311;
+  color: #f3f7f9;
+  text-align: center;
+}
+
+.grayBg {
+  background-color: #374249;
+  color: #f3f7f9;
+  text-align: center;
+}
+
+footer {
+  background-color: #f3f7f9;
+}
+footer .contact {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+footer .contact h2 {
+  width: 100%;
+  margin: 2em;
+  text-align: center;
+}
+footer .contact iframe {
+  margin: 2em;
+}
+footer .contact .copyright {
+  width: 100%;
+  height: 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #374249;
+  color: #f3f7f9;
+}
+footer .contact .copyright span {
+  color: #f75311;
+}
+
+.forma {
+  width: 40%;
+  height: 10.7em;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #f75311;
+}
+.forma form {
+  width: 100%;
+}
+.forma form select {
+  width: 10em;
+  margin: 1em;
+  border: none;
+}
+.forma form #name {
+  width: 28em;
+  margin: 1em;
+  border: none;
+}
+.forma form #email {
+  width: 40.3em;
+  margin: 1em;
+  border: none;
+}
+.forma form textarea {
+  width: 40.3em;
+  height: 20%;
+  margin: 1em;
+  border: none;
+}
+
+/*# sourceMappingURL=style.css.map */
