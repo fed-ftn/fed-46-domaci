@@ -1,0 +1,20 @@
+:root {
+    --clr-accent: #f75311;
+    --clr-main: #374249;
+    --clr-text: #797979;
+    --clr-header: 55, 66, 73;
+    --clr-grey-light: #cfd1d3;
+    --clr-grey-dark: #f3f7f9;
+
+    --fs-100: 1rem;
+    --fs-200: 2rem;
+    --fs-300: 2.5rem;
+    --fs-150: 1.5rem;
+
+    @include breakpoint(tablet) {
+        --fs-300: 3.5rem;
+    }
+    @include breakpoint(mobile) {
+        --fs-300: 2em;
+    }
+}

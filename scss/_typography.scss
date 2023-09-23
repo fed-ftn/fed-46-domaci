@@ -1,0 +1,25 @@
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: var(--fs-100);
+    color: var(--clr-text);
+}
+
+.heading {
+    text-align: center;
+    font-weight: 400;
+    &--main {
+        @extend .heading;
+        font-size: var(--fs-300);
+        color: #fff;
+
+        span {
+            font-size: .5em;
+            text-align: center;
+        }
+    }
+
+    &--secondary {
+        font-size: var(--fs-200);
+        color:var(--clr-main);
+    }
+}

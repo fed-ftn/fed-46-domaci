@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet" />
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="css/main.css" />
+        <title>Domaci</title>
+    </head>
+    <body>
+        <nav class="nav">
+            <ul>
+                <li class="active"><img src="slike/location.png" alt="Location Pin" /><a href="#">New York</a></li>
+                <li><a href="#">Rent</a></li>
+                <li><a href="#">Buy</a></li>
+                <li><a href="#">Sell</a></li>
+                <li><a href="#">Messages</a></li>
+            </ul>
+        </nav>
+        <header class="header">
+            <h1 class="heading--main">Welcome to HomeExchange<span>Your fastest way to find or sell home online.</span></h1>
+        </header>
+        <section class="info">
+            <ul>
+                <li>$1.200 - $4.000</li>
+                <li>1+ Bedroom</li>
+                <li>Garage</li>
+            </ul>
+        </section>
+        <section class="gallery">
+            <div class="gallery__container">
+                <figure>
+                    <img src="slike/1.jpg" alt="" />
+                    <figcaption>Loft apartment $3,000</figcaption>
+                </figure>
+                <figure>
+                    <img src="slike/2.jpg" alt="" />
+                    <figcaption>Loft apartment $3,000</figcaption>
+                </figure>
+                <figure>
+                    <img src="slike/3.jpg" alt="" />
+                    <figcaption>Loft apartment $3,000</figcaption>
+                </figure>
+                <figure>
+                    <img src="slike/4.jpg" alt="" />
+                    <figcaption>Loft apartment $3,000</figcaption>
+                </figure>
+                <figure>
+                    <img src="slike/5.jpg" alt="" />
+                    <figcaption>Loft apartment $3,000</figcaption>
+                </figure>
+                <figure>
+                    <img src="slike/6.jpg" alt="" />
+                    <figcaption>Loft apartment $3,000</figcaption>
+                </figure>
+            </div>
+        </section>
+        <section class="pricing">
+            <h2 class="heading--secondary">PRICING</h2>
+            <p>Our services prices in New York</p>
+            <table class="table">
+                <tr>
+                    <th class="empty"></th>
+                    <th class="empty"></th>
+                    <th class="table__main" colspan="2">Price</th>
+                </tr>
+                <tr>
+                    <td class="empty"></td>
+                    <td class="empty"></td>
+                    <td class="table__secondary">Rent/Buy</td>
+                    <td class="table__secondary">Sell</td>
+                </tr>
+                <tr>
+                    <th class="table__main" rowspan="3">Location</th>
+                    <td class="table__secondary">Downtown</td>
+                    <td>3$</td>
+                    <td>3$</td>
+                </tr>
+                <tr>
+                    <td class="table__secondary">Center</td>
+                    <td>3$</td>
+                    <td>3$</td>
+                </tr>
+                <tr>
+                    <td class="table__secondary">Manhattan</td>
+                    <td>3$</td>
+                    <td>3$</td>
+                </tr>
+            </table>
+        </section>
+
+        <section class="contact">
+            <h2 class="heading--secondary">CONTACT US</h2>
+            <div class="contact__container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5193.859823263671!2d-73.98950914244224!3d40.75956225188966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855a96da09d%3A0x860bf5a5e1a00a68!2sTimes%20Square%2C%20New%20York%2C%20NY%2010036%2C%20USA!5e0!3m2!1sen!2srs!4v1695473627046!5m2!1sen!2srs"
+                    width="600"
+                    height="450"
+                    style="border: 0"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    class="contact__map"
+                ></iframe>
+
+                <form action="#" class="form">
+                    <select class="form__input form__input--gender" name="gender" id="gender">
+                        <option value="male">Mr</option>
+                        <option value="female">Mrs</option>
+                    </select>
+                    <input type="text" name="name" id="name" class="form__input form__input--name" placeholder="Your name" />
+                    <input type="email" name="email" id="email" class="form__input" placeholder="Your email" />
+                    <textarea name="message" id="textare" class="form__input form__input--textarea" placeholder="Your message"></textarea>
+                </form>
+            </div>
+        </section>
+        <footer class="footer">
+            <p>Copyright@ 2016 <span>HomeExchange</span></p>
+        </footer>
+    </body>
+</html>

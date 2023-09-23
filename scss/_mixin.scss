@@ -1,0 +1,27 @@
+@mixin container {
+    display: grid;
+    grid-template-columns: minmax(1rem, 1fr) minmax(0, 80rem) minmax(1rem, 1fr);
+    row-gap: 4rem;
+    justify-items: center;
+
+    & > * {
+        grid-column: 2/3;
+    }
+
+    @include breakpoint(tablet) {
+        grid-template-columns: minmax(1rem, 1fr) minmax(0, 40rem) minmax(1rem, 1fr);
+    }
+
+}
+
+@mixin breakpoint($bp) {
+    @if $bp == tablet {
+        @media (width < 62.5em) {
+            @content;
+        }
+    } @else if $bp == mobile {
+        @media (width < 37.5em) {
+            @content;
+        }
+    }
+}
