@@ -14,10 +14,18 @@
           <p>New York</p>
         </div>
         <ul>
-          <li>Rent</li>
-          <li>Buy</li>
-          <li>Sell</li>
-          <li>Messages</li>
+          <li>
+            <a href="/">Rent</a>
+          </li>
+          <li>
+            <a href="/">Buy</a>
+          </li>
+          <li>
+            <a href="/">Sell</a>
+          </li>
+          <li>
+            <a href="/">Messages</a>
+          </li>
         </ul>
       </nav>
     </header>
@@ -29,18 +37,36 @@
         </div>
       </section>
       <section class="filter">
-        <div><p>$1.200-$4.000</p></div>
-        <div><p>1+ Bedroom</p></div>
-        <div><p>Garage</p></div>
+        <div><a href="/">$1.200 - $4.000</a></div>
+        <div><a href="/">1+ Bedroom</a></div>
+        <div><a href="/">Garage</a></div>
       </section>
       <section class="gallery">
-        <div>
-          <img src="slike/1.jpg" alt="1" />
-          <img src="slike/2.jpg" alt="2" />
-          <img src="slike/3.jpg" alt="3" />
-          <img src="slike/4.jpg" alt="4" />
-          <img src="slike/5.jpg" alt="5" />
-          <img src="slike/6.jpg" alt="6" />
+        <div class="slikawrapper">
+          <div class="imageWrapper">
+            <img src="slike/1.jpg" alt="1" id="slika" />
+            <div class="overlay">Loft Apartment <br />$3.000</div>
+          </div>
+          <div class="imageWrapper">
+            <img src="slike/2.jpg" alt="2" id="slika" />
+            <div class="overlay">Garden Apartment <br />$2.000</div>
+          </div>
+          <div class="imageWrapper">
+            <img src="slike/3.jpg" alt="3" id="slika" />
+            <div class="overlay">Roof-Top Apartment <br />$3.500</div>
+          </div>
+          <div class="imageWrapper">
+            <img src="slike/4.jpg" alt="4" id="slika" />
+            <div class="overlay">Side Apartment <br />$3.000</div>
+          </div>
+          <div class="imageWrapper">
+            <img src="slike/5.jpg" alt="5" id="slika" />
+            <div class="overlay">Cosie Apartment <br />$4.000</div>
+          </div>
+          <div class="imageWrapper">
+            <img src="slike/6.jpg" alt="6" id="slika" />
+            <div class="overlay">1st Apartment <br />$1.000</div>
+          </div>
         </div>
       </section>
       <section class="pricing">
@@ -53,7 +79,7 @@
             <table>
               <tr>
                 <td rowspan="2"></td>
-                <td rowspan="2"></td>
+                <td rowspan="2" class="delete"></td>
                 <td colspan="2" class="orangeBg">Price</td>
               </tr>
               <tr>
@@ -95,25 +121,38 @@
         ></iframe>
         <div class="forma">
           <form action="/" method="post">
-            <select name="gender" id="gender">
-              <option value="Mr">Mr</option>
-              <option value="Mrs" selected>Mrs</option>
-              <option value="Miss">Miss</option>
-            </select>
-            <input type="text" name="name" id="name" placeholder="Your name" />
-            <input
-              type="email"
-              name="email"
-              id="email"
-              placeholder="Your email"
-            />
-            <textarea
-              name="Message"
-              id="message"
-              cols="30"
-              rows="10"
-              placeholder="Your message"
-            ></textarea>
+            <div class="select">
+              <select name="gender" id="gender">
+                <option value="Mr">Mr</option>
+                <option value="Mrs" selected>Mrs</option>
+                <option value="Miss">Miss</option>
+              </select>
+            </div>
+            <div class="name">
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Your name"
+              />
+            </div>
+            <div class="email">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Your email"
+              />
+            </div>
+            <div class="textarea">
+              <textarea
+                name="Message"
+                id="message"
+                cols="30"
+                rows="10"
+                placeholder="Your message"
+              ></textarea>
+            </div>
           </form>
         </div>
         <div class="copyright">

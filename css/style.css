@@ -38,17 +38,23 @@ header nav .newyork p {
   text-decoration: underline;
 }
 
-nav ul {
+ul {
   width: 80%;
   height: 100%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
-nav ul li {
+ul li {
   display: inline-block;
   margin: 1em 3em 1em 1em;
+}
+ul li a {
+  text-decoration: none;
   color: #f3f7f9;
+}
+ul li a:hover {
+  text-decoration: underline;
 }
 
 main {
@@ -99,6 +105,17 @@ main .filter div {
   border-radius: 2em;
   margin: 1em;
 }
+main .filter div:hover {
+  background-color: #374249;
+  cursor: pointer;
+}
+main .filter div:hover a {
+  color: #f3f7f9;
+}
+main .filter div a {
+  text-decoration: none;
+  color: #797979;
+}
 main .gallery {
   width: 100%;
   height: 40%;
@@ -106,7 +123,7 @@ main .gallery {
   justify-content: center;
   background-color: #f3f7f9;
 }
-main .gallery div {
+main .gallery .slikawrapper {
   width: 80%;
   display: flex;
   justify-content: flex-start;
@@ -114,10 +131,43 @@ main .gallery div {
   align-content: center;
   flex-wrap: wrap;
 }
-main .gallery div img {
+main .gallery .slikawrapper h3 {
+  display: none;
+}
+main .gallery .slikawrapper p {
+  display: none;
+}
+main .gallery .slikawrapper img {
   height: 40%;
   width: 22%;
+}
+main .imageWrapper {
+  width: 22%;
+  height: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
   margin: 1em;
+  position: relative;
+}
+main .imageWrapper .overlay {
+  position: absolute;
+  top: 0;
+  background: rgb(255, 255, 255);
+  background: rgba(255, 255, 255, 0.6);
+  color: #f1f1f1;
+  width: 100%;
+  transition: 0.5s ease;
+  opacity: 0;
+  color: black;
+  font-size: 20px;
+  padding: 30px 0 60px 0;
+  text-align: center;
+}
+main .imageWrapper #slika {
+  width: 100%;
+  height: 100%;
 }
 main .pricing {
   width: 100%;
@@ -126,6 +176,10 @@ main .pricing {
 }
 main .pricing .price {
   width: 50%;
+}
+
+.imageWrapper:hover .overlay {
+  opacity: 1;
 }
 
 table {
@@ -139,7 +193,8 @@ table tr td {
 table tr td:first-of-type {
   border: none;
 }
-table tr td:nth-of-type(2) {
+
+.delete {
   border: none;
 }
 
@@ -147,7 +202,7 @@ table tr td:nth-of-type(2) {
   text-align: center;
 }
 .pricingWrapper h2 {
-  margin: 2em;
+  margin: 1.5em;
 }
 .pricingWrapper p {
   margin-bottom: 2em;
@@ -196,34 +251,69 @@ footer .contact .copyright span {
 }
 
 .forma {
-  width: 40%;
-  height: 10.7em;
-  display: flex;
-  flex-wrap: wrap;
-  background-color: #f75311;
+  width: 36em;
+  height: 15em;
 }
 .forma form {
-  width: 100%;
+  display: grid;
+  grid-template-columns: [first] 25% [line2] 75% [end];
+  grid-template-rows: [row1start] 18% [row1end] 25% [thirdline] 50% [rowend];
+  background-color: #f75311;
+  height: 100%;
 }
-.forma form select {
-  width: 10em;
-  margin: 1em;
+.forma .select {
+  display: grid;
+  grid-column-start: 1;
+  grid-column-end: line2;
+  grid-row-start: row1start;
+  grid-row-end: 1;
+}
+.forma .name {
+  display: grid;
+  grid-column-start: 2;
+  grid-column-end: end;
+  grid-row-start: row1start;
+  grid-row-end: 2;
+}
+.forma .email {
+  display: grid;
+  grid-column-start: 1;
+  grid-column-end: end;
+  grid-row-start: row1end;
+  grid-row-end: 3;
+}
+.forma .textarea {
+  display: grid;
+  grid-column-start: 1;
+  grid-column-end: end;
+  grid-row-start: thirdline;
+  grid-row-end: 3;
+}
+.forma select {
+  justify-self: end;
+  align-self: end;
+  width: 87%;
   border: none;
+  height: 2em;
 }
-.forma form #name {
-  width: 28em;
-  margin: 1em;
+.forma #name {
+  width: 90%;
+  justify-self: center;
+  align-self: end;
   border: none;
+  height: 2em;
 }
-.forma form #email {
-  width: 40.3em;
-  margin: 1em;
+.forma #email {
+  width: 93%;
+  justify-self: center;
+  align-self: center;
   border: none;
+  height: 2em;
 }
-.forma form textarea {
-  width: 40.3em;
-  height: 20%;
-  margin: 1em;
+.forma textarea {
+  width: 93%;
+  height: 100%;
+  justify-self: center;
   border: none;
 }
 

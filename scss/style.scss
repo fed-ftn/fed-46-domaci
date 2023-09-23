@@ -37,20 +37,27 @@ header {
   }
 }
 
-nav {
-  ul {
-    width: 80%;
-    height: 100%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    li {
-      display: inline-block;
-      margin: 1em 3em 1em 1em;
+ul {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  li {
+    display: inline-block;
+    margin: 1em 3em 1em 1em;
+
+    a {
+      text-decoration: none;
       color: $sectionBg;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 }
+
 main {
   width: 100%;
   height: 128em;
@@ -96,6 +103,18 @@ main {
       border: 1px solid $fontColor;
       border-radius: 2em;
       margin: 1em;
+
+      &:hover {
+        background-color: $darkBlue;
+        cursor: pointer;
+        a {
+          color: $sectionBg;
+        }
+      }
+      a {
+        text-decoration: none;
+        color: $fontColor;
+      }
     }
   }
   .gallery {
@@ -104,21 +123,57 @@ main {
     display: flex;
     justify-content: center;
     background-color: $sectionBg;
-    div {
+    .slikawrapper {
       width: 80%;
       display: flex;
       justify-content: flex-start;
       align-items: center;
       align-content: center;
       flex-wrap: wrap;
-
+      h3 {
+        display: none;
+      }
+      p {
+        display: none;
+      }
       img {
         height: 40%;
         width: 22%;
-        margin: 1em;
       }
     }
   }
+
+  .imageWrapper {
+    width: 22%;
+    height: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 1em;
+    position: relative;
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      background: rgb(255, 255, 255);
+      background: rgba(255, 255, 255, 0.6);
+      color: #f1f1f1;
+      width: 100%;
+      transition: 0.5s ease;
+      opacity: 0;
+      color: black;
+      font-size: 20px;
+      padding: 30px 0 60px 0;
+      text-align: center;
+    }
+
+    #slika {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
   .pricing {
     width: 100%;
     display: flex;
@@ -128,7 +183,9 @@ main {
     }
   }
 }
-
+.imageWrapper:hover .overlay {
+  opacity: 1;
+}
 table {
   border-spacing: 0;
   width: 100%;
@@ -141,18 +198,17 @@ table {
       &:first-of-type {
         border: none;
       }
-
-      &:nth-of-type(2) {
-        border: none;
-      }
     }
   }
 }
 
+.delete {
+  border: none;
+}
 .pricingWrapper {
   text-align: center;
   h2 {
-    margin: 2em;
+    margin: 1.5em;
   }
   p {
     margin-bottom: 2em;
@@ -202,33 +258,69 @@ footer {
 }
 
 .forma {
-  width: 40%;
-  height: 10.7em;
-  display: flex;
-  flex-wrap: wrap;
-  background-color: $orange;
+  width: 36em;
+  height: 15em;
   form {
-    width: 100%;
-    select {
-      width: 10em;
-      margin: 1em;
-      border: none;
-    }
-    #name {
-      width: 28em;
-      margin: 1em;
-      border: none;
-    }
-    #email {
-      width: 40.3em;
-      margin: 1em;
-      border: none;
-    }
-    textarea {
-      width: 40.3em;
-      height: 20%;
-      margin: 1em;
-      border: none;
-    }
+    display: grid;
+    grid-template-columns: [first] 25% [line2] 75% [end];
+    grid-template-rows: [row1start] 18% [row1end] 25% [thirdline] 50% [rowend];
+    background-color: $orange;
+    height: 100%;
+  }
+
+  .select {
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: line2;
+    grid-row-start: row1start;
+    grid-row-end: 1;
+  }
+  .name {
+    display: grid;
+    grid-column-start: 2;
+    grid-column-end: end;
+    grid-row-start: row1start;
+    grid-row-end: 2;
+  }
+  .email {
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: end;
+    grid-row-start: row1end;
+    grid-row-end: 3;
+  }
+  .textarea {
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: end;
+    grid-row-start: thirdline;
+    grid-row-end: 3;
+  }
+  select {
+    justify-self: end;
+    align-self: end;
+    width: 87%;
+    border: none;
+    height: 2em;
+  }
+  #name {
+    width: 90%;
+    justify-self: center;
+    align-self: end;
+    border: none;
+    height: 2em;
+  }
+  #email {
+    width: 93%;
+    justify-self: center;
+    align-self: center;
+    border: none;
+    height: 2em;
+  }
+  textarea {
+    width: 93%;
+    height: 100%;
+    justify-self: center;
+    border: none;
   }
 }
